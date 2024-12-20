@@ -1,4 +1,3 @@
-// dogReducer.ts
 import {
   DogActionTypes,
   FETCH_BREEDS_REQUEST,
@@ -9,14 +8,14 @@ import { Breed } from "../types/actionTypes";
 
 interface State {
   page: string;
-  breeds: Breed[]; // Make sure breeds is an array of Breed objects
+  breeds: Breed[];
   loading: boolean;
   error: string | null;
 }
 
 const initialState: State = {
   page: "default",
-  breeds: [], // Empty array of Breed objects
+  breeds: [],
   loading: false,
   error: null,
 };

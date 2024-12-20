@@ -1,10 +1,8 @@
-// actionTypes.ts
 export const SET_PAGE = "SET_PAGE";
 export const FETCH_BREEDS_REQUEST = "FETCH_BREEDS_REQUEST";
 export const FETCH_BREEDS_SUCCESS = "FETCH_BREEDS_SUCCESS";
 export const FETCH_BREEDS_FAILURE = "FETCH_BREEDS_FAILURE";
 
-// Định nghĩa kiểu dữ liệu cho Breed
 export interface Breed {
   id: string;
   name: string;
@@ -24,8 +22,6 @@ export interface Breed {
   hypoallergenic: boolean;
 }
 
-// Các action interface
-
 export interface SetPageAction {
   type: typeof SET_PAGE;
   payload: string;
@@ -37,7 +33,7 @@ export interface FetchBreedsRequest {
 
 export interface FetchBreedsSuccess {
   type: typeof FETCH_BREEDS_SUCCESS;
-  payload: Breed[]; // Dữ liệu trả về là mảng các đối tượng Breed
+  payload: Breed[];
 }
 
 export interface FetchBreedsFailure {
@@ -45,7 +41,6 @@ export interface FetchBreedsFailure {
   payload: string;
 }
 
-// Định nghĩa kiểu cho tất cả action types
 export type DogActionTypes =
   | SetPageAction
   | FetchBreedsRequest

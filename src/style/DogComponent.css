@@ -1,0 +1,71 @@
+.dog-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text,
+.error-text {
+  color: #d9534f;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.breed-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.breed-item {
+  background-color: #fff;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.breed-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.breed-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.breed-info {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.hypoallergenic {
+  font-size: 14px;
+  color: rgb(49, 173, 132);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .dog-container {
+    padding: 10px;
+  }
+
+  .breed-item {
+    padding: 10px;
+  }
+
+  .breed-name {
+    font-size: 20px;
+  }
+
+  .breed-description,
+  .breed-info {
+    font-size: 14px;
+  }
+}
