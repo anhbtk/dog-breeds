@@ -12,13 +12,11 @@ const DogComponent: React.FC = () => {
     dispatch(fetchBreeds());
   }, [dispatch]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className="loading-text">Loading...</p>;
+  if (error) return <p className="error-text">Error: {error}</p>;
 
   return (
     <div className="dog-container">
-      {loading && <p className="loading-text">Loading breeds...</p>}
-      {error && <p className="error-text">Error: {error}</p>}
       {!loading && !error && breeds.length > 0 && (
         <ul className="breed-list">
           {breeds.map((breed: Breed) => (
