@@ -1,48 +1,11 @@
 import axios from "axios";
 import { Dispatch } from "redux";
-
-export const FETCH_BREEDS_REQUEST = "FETCH_BREEDS_REQUEST";
-export const FETCH_BREEDS_SUCCESS = "FETCH_BREEDS_SUCCESS";
-export const FETCH_BREEDS_FAILURE = "FETCH_BREEDS_FAILURE";
-
-export interface FetchBreedsRequestAction {
-  type: typeof FETCH_BREEDS_REQUEST;
-}
-
-export interface FetchBreedsSuccessAction {
-  type: typeof FETCH_BREEDS_SUCCESS;
-  payload: Breed[];
-}
-
-export interface FetchBreedsFailureAction {
-  type: typeof FETCH_BREEDS_FAILURE;
-  payload: string;
-}
-
-export type DogActionTypes =
-  | FetchBreedsRequestAction
-  | FetchBreedsSuccessAction
-  | FetchBreedsFailureAction;
-
-// Define Breed interface
-export interface Breed {
-  id: string;
-  name: string;
-  description: string;
-  life: {
-    min: number;
-    max: number;
-  };
-  male_weight: {
-    min: number;
-    max: number;
-  };
-  female_weight: {
-    min: number;
-    max: number;
-  };
-  hypoallergenic: boolean;
-}
+import {
+  DogActionTypes,
+  FETCH_BREEDS_REQUEST,
+  FETCH_BREEDS_SUCCESS,
+  FETCH_BREEDS_FAILURE,
+} from "../types/actionTypes";
 
 interface ApiResponse {
   data: {

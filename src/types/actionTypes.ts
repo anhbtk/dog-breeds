@@ -1,4 +1,3 @@
-export const SET_PAGE = "SET_PAGE";
 export const FETCH_BREEDS_REQUEST = "FETCH_BREEDS_REQUEST";
 export const FETCH_BREEDS_SUCCESS = "FETCH_BREEDS_SUCCESS";
 export const FETCH_BREEDS_FAILURE = "FETCH_BREEDS_FAILURE";
@@ -22,11 +21,6 @@ export interface Breed {
   hypoallergenic: boolean;
 }
 
-export interface SetPageAction {
-  type: typeof SET_PAGE;
-  payload: string;
-}
-
 export interface FetchBreedsRequest {
   type: typeof FETCH_BREEDS_REQUEST;
 }
@@ -42,7 +36,6 @@ export interface FetchBreedsFailure {
 }
 
 export type DogActionTypes =
-  | SetPageAction
   | FetchBreedsRequest
   | FetchBreedsSuccess
   | FetchBreedsFailure;

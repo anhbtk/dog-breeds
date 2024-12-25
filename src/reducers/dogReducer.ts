@@ -7,14 +7,12 @@ import {
 import { Breed } from "../types/actionTypes";
 
 interface State {
-  page: string;
   breeds: Breed[];
   loading: boolean;
   error: string | null;
 }
 
 const initialState: State = {
-  page: "default",
   breeds: [],
   loading: false,
   error: null,
@@ -25,7 +23,7 @@ const dogReducer = (state = initialState, action: DogActionTypes): State => {
     case FETCH_BREEDS_REQUEST:
       return { ...state, loading: true };
     case FETCH_BREEDS_SUCCESS:
-      return { ...state, loading: false, breeds: action.payload }; // payload must be Breed[] here
+      return { ...state, loading: false, breeds: action.payload };
     case FETCH_BREEDS_FAILURE:
       return { ...state, loading: false, error: action.payload };
     default:
