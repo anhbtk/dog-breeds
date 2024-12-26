@@ -50,7 +50,10 @@
   color: rgb(49, 173, 132);
   font-weight: bold;
 }
-
+h1 {
+  color: #000;
+  text-align: center;
+}
 @media (max-width: 768px) {
   .dog-container {
     padding: 10px;
