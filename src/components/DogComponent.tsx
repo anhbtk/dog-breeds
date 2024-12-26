@@ -21,12 +21,14 @@ const DogComponent: React.FC = () => {
 
   return (
     <div className="dog-container">
-      {!loading && !error && breeds.length > 0 && (
+      {!loading && !error && breeds.length > 0 ? (
         <ul className="breed-list">
           {breeds.map((breed: Breed) => (
             <BreedItem key={breed.id} breed={breed} />
           ))}
         </ul>
+      ) : (
+        <p className="no-data-text">No breeds available</p>
       )}
     </div>
   );
